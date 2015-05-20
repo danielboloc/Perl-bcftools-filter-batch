@@ -35,7 +35,7 @@ sub filter_create_hash_bcf_files($$$$){
   # Open directory
   # If you put this script inside the directory where you have all the .bcf files
   # use "./"
-  my $dir = "/home/sergimash/NGS_sequencing/samtools-1.1_WORKING_WELL/bcf_final/";
+  my $dir = "/home/user/bcf_files/"; # or './'
   print "\t\t\033[0;33m[==========]\033[0m OPENING DIRECTORY $dir ...\n\n";
   opendir(BCF, $dir) || die "### ERROR ### Cannot open directory: $dir\n\n";
   print "\t\t\033[0;32m[       OK ]\033[0m DONE\n\n";
@@ -79,7 +79,7 @@ sub filter_create_hash_bcf_files($$$$){
 OPTIONS
 
     # Here is using the DEFAULT values for each filter, but you can change them accordingly
-    my $cmd = "bcftools view $dir$bcf | /home/sergimash/NGS_sequencing/bcftools-1.2/vcfutils.pl varFilter -Q 10 -d 2 -D 10000000 -a 2 -w 3 -W 10 -1 1e-4 -2 1e-100 -3 0 -4 1e-4 -e 1e-4 > $bcf.FILTERED.vcf";
+    my $cmd = "bcftools view $dir$bcf | /home/user/bcftools-1.2/vcfutils.pl varFilter -Q 10 -d 2 -D 10000000 -a 2 -w 3 -W 10 -1 1e-4 -2 1e-100 -3 0 -4 1e-4 -e 1e-4 > $bcf.FILTERED.vcf";
     system($cmd);
 
     # Open each .bcf file
