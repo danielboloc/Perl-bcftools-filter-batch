@@ -131,8 +131,6 @@ OPTIONS
     # Here you can do all sort of stats or operations will the data obtained in the hash.
     # For example, for each position how many 'FILES' have it as a variant
 
-
-    # exists()
   }; # while READDIR
   if($files == 0){
     print "\t\t\033[0;31m[   ERROR  ]\033[0m NO .bcf/.vcf FILES ...\n\n";
