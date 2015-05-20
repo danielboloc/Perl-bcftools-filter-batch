@@ -85,7 +85,7 @@ OPTIONS
     # Open each .bcf file
     open(vcfFIL, "< $bcf.FILTERED.vcf") || die "### ERROR ### Cannot open file: $bcf.FILTERED.vcf\n";
 
-    $files++; # increment file counter by 1 wicth each file read
+    $files++; # increment file counter by 1 with each file read
 
     # READ each .bcf file from the directory
     READvcf: while(<vcfFIL>){
